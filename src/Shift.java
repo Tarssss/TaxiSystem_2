@@ -3,11 +3,13 @@ import java.time.LocalDate;
 public class Shift {
     private LocalDate date;
     private int hours;
+    private Driver driver;
     private Car car;
 
-    public Shift(LocalDate date, int hours, Car car) {
+    public Shift(LocalDate date, int hours, Driver driver, Car car) {
         this.date = date;
         this.hours = hours;
+        this.driver = driver;
         this.car = car;
     }
 
@@ -19,12 +21,11 @@ public class Shift {
         return hours;
     }
 
-    public Car getCar() {
-        return car;
+    public Driver getDriver() {
+        return driver;
     }
 
-    public double getPayment() {
-        // 假设每小时工资为100元
-        return hours * 100;
+    public Car getCar() {
+        return car;
     }
 }
